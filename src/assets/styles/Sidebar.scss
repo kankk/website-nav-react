@@ -1,0 +1,33 @@
+@import 'common.sass';
+@media (min-width: 481px) {
+  .sidebar {
+    width: $sidebar-width;
+    height: 100vh;
+    background-color: $sidebar-bgColor;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    ul {
+      margin-left: 50px;
+      margin-top: 50px;
+      li {
+        font-size: $sub-font-size;
+        padding: 10px 0;
+        color: #6b7386;
+        &:hover {
+          color: $sidebar-li-hover;
+          cursor: pointer;
+        }
+      }
+      li.active {
+        color: $sidebar-li-active;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}
